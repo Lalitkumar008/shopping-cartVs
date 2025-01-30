@@ -83,7 +83,7 @@ width: 39%;
     align-items: center;
 }
 .address-modal{
-    height: 99%;
+    height: auto;
     width: 90%;
     background-color: #fff;
    box-shadow: -4px 10px 10px #edd5d5ac;
@@ -143,6 +143,10 @@ flex-wrap: wrap;
     text-align: end;
 }
 
+
+.address-modal-btn{
+    margin: 20px 0px;
+}
 .address-modal-btn:hover{
 background-color: rgba(0, 0, 0, 0.749);
 }
