@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- shopping cart -->
+     <div id="header">
+        <h3>shopping cart</h3>
+        <p>Home / clothing categories / my shopping cart</p>
+     </div>
+
+     <div id="main">
+        <div id="left">
+            <div class="left-details" id="customer-details">
+                <p class="customer-details-heading">customer details</p>
+                <div id="show-address" class="customer-address">
+                    <div>
+                        <p>billing address</p>
+                        <p id="billing-address">address</p>
+                    </div>
+                    <button class="change-btn">Change</button>
+                </div>
+                <div class="customer-address">
+                <div>
+                    <p>shipping address</p>
+                    <p id="shipping-address">address</p>
+                </div>
+                <button class="change-btn">Change</button>
+                </div>
+<div id="address-modal-parent" class="address-modal-parent">
+    <div class="address-modal" id="address-modal">
+        <div class="add-address-heading">
+            <h3 class="">Add Address</h3>
+           
+            <i id="modal-close-btn" class="fa-regular fa-circle-xmark">
+                
+            </i>
+        </div>
+        <!-- showing address -->
+        <!-- <div> -->
+        <div id="address-list" class="address-card-container">
+            no-address-selected
+        </div>
+
+        <div id="selected-address"></div>
+        <div>
+            <button class="address-form-btn address-modal-btn" id="set-address-btn">set address</button>
+           
+        </div>
+        <!-- </div> -->
+    
+        <!-- adding address form -->
+        <div class="add-address-container">
+            <form id="add-new-address-form">
+                <div class="add-new-address-child1">
+                   <div class="address-child-layout">
+                    <label for="flatNumber">Flat/Condo/House Number </label>
+                    <input type="number" id="flatNumber" name="flatNumber">
+                   </div>
+    
+                   <div class="address-child-layout">
+                    <label for="streetNumber">Street Number/Name</label>
+                    <input type="text" id="streetNumber" name="streetNumber">
+                   </div>
+    
+                    <div class="address-child-layout">
+                        <label for="cityName">City</label>
+                        <input type="text" id="cityName" name="cityName">
+                    </div>
+                </div>
+    
+                <div class="add-new-address-child1">
+                  <div class="address-child-layout">
+                    <label for="countryName">Country</label>
+                    <select name="countryName" id="countryName">
+                        <option value=""></option>
+                        <option value="india">India</option>
+                    </select>
+                  </div>
+    
+                  <div class="address-child-layout">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="number" id="zipCode" name="zipCode">
+                  </div>
+                </div>
+    
+                <div>
+                    <button 
+                    
+                    id="set-address-btn"
+                    class="address-form-btn address-modal-btn" type="submit">Add address</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+                <div>
+                    <p id="add-new-address-btn" class="add-new-address
+                     
+                    ">+add new address</p>
+                </div>
+            </div>
+            <!-- payment-div -->
+            <div class="left-details" id="payment-details">
+                <p class="payment-method-heading">payment methods</p>
+                <form id="payment-radio-form">
+                  <div class="payment-heading">
+                    <input id="credit-card" type="radio" name="payment-type" value="credit-card">
+                    <label for="credit-card">Debit/Credit Card</label>
+                  </div>
+                    <!-- card-detail form -->
+                  <div id="credit-card-form" class="credit-card-form-visible dynamic-content"
+                  
+                  >
+                
+               
+
+                  </div>
+                  <div class="payment-heading">
+                    <input id="netbanking" type="radio" name="payment-type" value="netbanking">
+                    <label for="netbanking">Netbanking</label>
+                  </div>
+                  <div class="payment-heading">
+                    <input id="upi" type="radio" name="payment-type" value="upi">
+                    <label for="upi">Google Pay / wallet</label>
+                  </div>
+                </form>
+            </div>
+        </div>
+        <div id="right">
+
+<div>
+    <p id="product-heading">Your orders</p>
+    <div id="product-container"></div>
+    <div>
+
+    <div class="extra-charges">
+        <p id="deliveryCharges">
+            <span class="charge-label">Delivery Charges:</span>
+            <span class="charge-amount"></span>
+        </p>
+        <p id="couponDiscount">
+            <span class="charge-label">Coupon Discount:</span>
+            <span class="charge-amount"></span>
+        </p>
+    </div>
+        <div class="payment-charges">
+            <p  id="totalPayment">Total Payment : $</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+     </div>
+     <script src="./index.js"></script>
+</body>
+</html>
+
+
+
